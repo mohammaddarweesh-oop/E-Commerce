@@ -1,24 +1,26 @@
 import "./App.css";
 // import { BrowserRouter } from "react-router-dom";
 
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import { Route, Router, Routes } from "react-router-dom";
+import Cart from "./Pages/Cart";
+// import About from "./Pages/About";
+import Navbar from "./Components/Navbar";
+import { Route, Routes } from "react-router-dom";
+import Shop from "./Pages/Shop";
 
 function App() {
+  const users = [
+    {
+      id: 1,
+      Name: "Cart",
+    },
+  ];
   return (
     <div className="App">
-      <h1>E-Commerce</h1>
-      <Router>
-        <Routes>
-
-          <Route path="/" element={<Home/>}/>
-          <Route path="/home" element={<Home/>}/>
-          <Route path="/About" element={<About/>}/>
-          <Route path="/faq"/>
-          
-        </Routes>
-      </Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Shop />} />
+        <Route path="/Cart" element={<Cart />} />
+      </Routes>
     </div>
   );
 }

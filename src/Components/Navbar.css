@@ -1,0 +1,9 @@
+.navbar {
+  width: 100%;
+  height: 30px;
+  background-color: aquamarine;
+  border: 1px solid black;
+}
+.navbar .links {
+  padding: 3px;
+}
